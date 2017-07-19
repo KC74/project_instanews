@@ -1,0 +1,22 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "One page responsive website using NYT API. It's kind of awesome.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KC74/project_instanews.git"
+  },
+  "author": "Kenneth Chow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KC74/project_instanews/issues"
+  },
+  "homepage": "https://github.com/KC74/project_instanews#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
