@@ -50,10 +50,10 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# CUSTOM IGNORE
-node_modules/
-.DS_Store
-
 # exclude these files
 !node_modules/gulp
 !node_modules/gulp-util
+
+# CUSTOM IGNORE
+node_modules/*
+.DS_Store
