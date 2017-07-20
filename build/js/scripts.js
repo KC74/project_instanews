@@ -1,6 +1,6 @@
 $(document).ready( function() {
 
-alert('hi');
+// alert('EYYYYYYY');
 
 
 }) // EOF doc.ready

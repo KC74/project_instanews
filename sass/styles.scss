@@ -1,0 +1,17 @@
+p {
+    text-decoration: none;
+    &:hover {
+        color: skyblue;
+    }
+}
+
+li {
+    text-decoration: none;
+    &.menu-item {
+        color: hotpink;
+        font-weight: 500;
+        .nav & {
+            display: inline-block;
+        }
+    }
+}
