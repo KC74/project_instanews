@@ -1,23 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Aloha Apparel Co.</title>
+  <title>Aloha Apparel Co.</title>
 
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="./build/css/styles.min.css">
-<script
+  <link rel="stylesheet" type="text/css" href="./build/css/styles.min.css">
+  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-
-  
 </head>
 <body>
-<p class='font test'>Hello, world!</p>
+  <div class="container">
 
-
+    <!-- start of header -->
+    <header class="site-header" id="site-header">
+      <img src="assets/images/nyt-logo.svg" alt="nyt logo" class="logo">
+      <form action="#" class="search-filter">
+        <div class="search-flex-container">
+          <p>Choose a section:</p>
+          <select name="sections" id="sections" class="sections">
+            <!-- NOTE: reset gallery on default -->
+          </select>
+        </div>
+      </form>
+    </header> <!-- EOF header -->
+  </div>
 <script src="./js/scripts.js"></script>
 </body>
 </html>

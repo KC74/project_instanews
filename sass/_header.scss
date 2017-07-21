@@ -1,0 +1,20 @@
+%flex-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.site-header {
+    @extend %flex-container;
+}
+
+.search-flex-container {
+    @extend %flex-container;
+    align-items: center; 
+
+    // sections
+    .sections {
+        background-color: white;
+        width: 100px;
+    }
+}

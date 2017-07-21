@@ -1,17 +1,8 @@
-p {
-    text-decoration: none;
-    &:hover {
-        color: skyblue;
-    }
-}
+@import 'variables';
+@import 'reset';
+@import 'globals';
+@import 'fonts';
+@import 'contents';
+@import 'footer';
+@import 'header';
 
-li {
-    text-decoration: none;
-    &.menu-item {
-        color: hotpink;
-        font-weight: 500;
-        .nav & {
-            display: inline-block;
-        }
-    }
-}
