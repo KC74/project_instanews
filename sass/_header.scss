@@ -9,6 +9,10 @@
     height: 100%;
     width: 100%;
     padding: 2rem;
+
+    button {
+        margin-top: 10px;
+    }
 }
 
 .search-flex-container {
@@ -25,5 +29,25 @@
         width: 125px;
         height: 25px;
         font-size: 1.1rem;
+    }
+}
+
+.header-transition {
+    transition: 
+        height 1s ease-in-out 0.5s,
+        margin 1s ease-in-out 0.5s;
+
+    img {
+        max-height: 120%;
+    }
+
+    &--up {
+        @extend .header-transition;
+        height: 25%;
+        margin: 4rem 0 0 0;
+    }
+    &--reset {
+        @extend .header-transition;
+        height: 100%;
     }
 }

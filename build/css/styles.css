@@ -85,17 +85,16 @@ body {
   font-weight: normal;
   font-style: italic; }
 
-.container {
+.container, footer {
   width: 100%;
-  margin: 0 auto;
-  height: 100%; }
+  height: 100%;
+  margin: 0 auto; }
+
+.main-content {
+  margin-top: 3rem; }
 
 footer {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 2rem; }
+  text-align: center; }
 
 .site-header, .search-flex-container {
   display: -webkit-box;
@@ -113,6 +112,8 @@ footer {
   height: 100%;
   width: 100%;
   padding: 2rem; }
+  .site-header button {
+    margin-top: 10px; }
 
 .search-flex-container {
   -webkit-box-align: center;
@@ -126,3 +127,14 @@ footer {
     width: 125px;
     height: 25px;
     font-size: 1.1rem; }
+
+.header-transition, .header-transition--up, .header-transition--reset {
+  -webkit-transition: height 1s ease-in-out 0.5s, margin 1s ease-in-out 0.5s;
+  transition: height 1s ease-in-out 0.5s, margin 1s ease-in-out 0.5s; }
+  .header-transition img, .header-transition--up img, .header-transition--reset img {
+    max-height: 120%; }
+  .header-transition--up {
+    height: 25%;
+    margin: 4rem 0 0 0; }
+  .header-transition--reset {
+    height: 100%; }
