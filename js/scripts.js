@@ -35,6 +35,12 @@ function makeListOfSections() {
     $('#sections').append(optionsString);
 }
 
+
+// FOOTER SCRIPTS
+// variables
+
+
+// MAIN 
 makeListOfSections();
 
 }) // EOF doc.ready

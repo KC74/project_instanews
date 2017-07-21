@@ -1,6 +1,13 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: $baseFontColor;
     font-size: $baseFontSize;
+    height: 100vh;
+    width: 100vw;
 }
 

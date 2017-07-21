@@ -6,15 +6,24 @@
 
 .site-header {
     @extend %flex-container;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
 }
 
 .search-flex-container {
     @extend %flex-container;
     align-items: center; 
 
+    p {
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+    }
     // sections
     .sections {
         background-color: white;
-        width: 100px;
+        width: 125px;
+        height: 25px;
+        font-size: 1.1rem;
     }
 }

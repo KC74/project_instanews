@@ -49,10 +49,17 @@ table {
 body, ul, li, ol, p, em, img {
   font-family: 'open_sanslight'; }
 
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
   background-color: black;
   color: #ffffff;
-  font-size: 16px; }
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw; }
 
 @font-face {
   font-family: 'open_sansbold';
@@ -78,6 +85,18 @@ body {
   font-weight: normal;
   font-style: italic; }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%; }
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 2rem; }
+
 .site-header, .search-flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,10 +109,20 @@ body {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.site-header {
+  height: 100%;
+  width: 100%;
+  padding: 2rem; }
+
 .search-flex-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .search-flex-container p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0; }
   .search-flex-container .sections {
     background-color: white;
-    width: 100px; }
+    width: 125px;
+    height: 25px;
+    font-size: 1.1rem; }
