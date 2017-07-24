@@ -7,11 +7,12 @@
 .site-header {
     @extend %flex-container;
     height: 100%;
-    width: 100%;
-    padding: 2rem;
+    min-width: 400px;
+    padding: 1rem;
 
-    button {
-        margin-top: 10px;
+    // tablet size styles
+    @include screenSize($tabletScreenSize) {
+        background-color: blue;
     }
 }
 
@@ -29,6 +30,7 @@
         width: 125px;
         height: 25px;
         font-size: 1.1rem;
+        text-transform: capitalize;
     }
 }
 
@@ -38,16 +40,19 @@
         margin 1s ease-in-out 0.5s;
 
     img {
-        max-height: 120%;
+        height: auto;
+        min-height: 25%;
     }
 
     &--up {
         @extend .header-transition;
         height: 25%;
-        margin: 4rem 0 0 0;
+        min-height: 25%;
+        margin-top: 3rem;
     }
     &--reset {
         @extend .header-transition;
         height: 100%;
     }
 }
+

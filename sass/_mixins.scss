@@ -1,0 +1,8 @@
+@mixin screenSize($size) {
+  @if $size == $tabletScreenSize {
+    @media only screen and (min-width: $tabletScreenSize) { @content; }
+  }
+  @else if $point == $desktopScreenSize {
+    @media only screen and (min-width: $desktopScreenSize) { @content; }
+  }
+}
