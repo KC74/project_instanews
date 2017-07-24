@@ -10,9 +10,10 @@
     min-width: 400px;
     padding: 1rem;
 
-    // tablet size styles
     @include screenSize($tabletScreenSize) {
-        background-color: blue;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
     }
 }
 
@@ -40,8 +41,13 @@
         margin 1s ease-in-out 0.5s;
 
     img {
-        height: auto;
         min-height: 25%;
+
+        // tablet size styles
+        @include screenSize($tabletScreenSize) {
+            // height: 50%;
+            max-height: 100%;
+        }
     }
 
     &--up {
@@ -49,6 +55,11 @@
         height: 25%;
         min-height: 25%;
         margin-top: 3rem;
+
+        // tablet size styles
+        @include screenSize($tabletScreenSize) {
+            // max-height: 20%;
+        }
     }
     &--reset {
         @extend .header-transition;

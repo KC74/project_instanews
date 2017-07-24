@@ -1,5 +1,12 @@
 footer {
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
     font-size: 0.9rem;
+
+    // desktop size styles
+    @include screenSize($desktopScreenSize) {
+        & {
+            text-align: left;
+        }
+    }
 }

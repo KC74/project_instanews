@@ -53,7 +53,6 @@ $('.sections').change(function(event) {
         $($contentLoader).show();
         $($stories).hide();
 
-        console.log($contentObject);
         // go through the object's stories
         for (var i = 0; i < $contentObject.length ; i++) {
           var $storyUrl = $contentObject[i].short_url, // url 
@@ -62,7 +61,7 @@ $('.sections').change(function(event) {
               $imageUrl = ''; // image url
 
           // only append items that have images and make sure it is not undefined
-          if ($contentObject[i].multimedia[$lastImg] !== undefined && $contentObject[i].multimedia.length > 0) {     
+          if ($contentObject[i].multimedia.length > 0) {     
             // set image url
             $imageUrl = $contentObject[i].multimedia[$lastImg].url; // bg
             // create new list item

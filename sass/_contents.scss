@@ -3,6 +3,14 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
+    margin: 0 auto;
+
+    // desktop size styles
+    @include screenSize($desktopScreenSize) {
+        & {
+            max-width: 1600px;
+        }
+    }
 }
 
 .content-container {
@@ -10,20 +18,29 @@
     align-items: center;
 
     ul.stories {
+        @extend .container;
         list-style-type: none;
-        display: none;
-        width: 100%;
-        
+        display: block;
+
+        @include screenSize($tabletScreenSize) {
+            & {
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+
+
         li {
             text-decoration: none;
             color: black;
 
             .story-container {
                 width: 100%;
-                padding-bottom: 100%;
+                height: 420px;
                 position: relative;
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-position: center;
 
                 & .story-abstract {
                     width: 100%;
@@ -47,4 +64,20 @@
 .main-content {
     margin-top: 3rem;
 }
+
+// tablet size styles
+@include screenSize($tabletScreenSize) {
+    .story-item {
+        width: 50%;
+    }
+}
+
+// desktop size styles
+@include screenSize($desktopScreenSize) {
+    .story-item {
+        flex: 0 1 25%;
+        max-width: 25%;
+    }
+}
+
 
