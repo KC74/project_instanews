@@ -22,8 +22,8 @@ Project Instanews demonstrates the following:
     - Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
 
 Functional requirements:
-- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user’s selection from a <select> field
-- Resize the header area (i.e. logo plus <select>) so that it transitions from occupying the entire screen on page load to only auto height after the <select> field is changed (you will need jQuery for this)
+- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user’s selection from a select field
+- Resize the header area (i.e. logo plus select) so that it transitions from occupying the entire screen on page load to only auto height after the select field is changed (you will need jQuery for this)
 - Link each returned image to its URL on the NYT website
 
 ### Tech & Languages Used
