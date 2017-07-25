@@ -11,10 +11,10 @@
 }
 
 .selectric {
-  border: 1px solid #000000;
+  border: 1px solid #AAA;
   background: rgba(66, 66, 66, 0.5);
   position: relative;
-  border-radius: 12px;
+  border-radius: 0px;
   text-transform: capitalize;
 }
 
@@ -33,15 +33,15 @@
 
 .selectric .button {
   background: rgba(204, 204, 204, 0.4);
-  border-radius: 12px;
+  border-radius: 0px;
   display: block;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 38px;
-  height: 38px;
+  width: 37px;
+  height: 100%;
   color: $selectricArrowColor;
   text-align: center;
   font: 0/0 a;
@@ -59,7 +59,7 @@
   width: 0;
   height: 0;
   border: 4px solid transparent;
-  border-top-color: #000000;
+  border-top-color: #AAA;
   border-bottom: none;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .selectric-hover .selectric {
-  border-color: #000000;
+  border-color: #AAA;
 }
 
 .selectric-hover .selectric .button {
@@ -76,7 +76,7 @@
 }
 
 .selectric-hover .selectric .button:after {
-  border-top-color: #000000;
+  border-top-color: #AAA;
 }
 
 .selectric-open {
@@ -84,7 +84,7 @@
 }
 
 .selectric-open .selectric {
-  border-color: #000000;
+  border-color: #AAA;
   background: rgba(66, 66, 66, 0.3);
 }
 

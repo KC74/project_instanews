@@ -50,10 +50,29 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# exclude these files
-!node_modules/gulp
-!node_modules/gulp-util
-
-# CUSTOM IGNORE
-node_modules/*
+# Ignore OS files #
+# =============== #
 .DS_Store
+.DS_Store?
+.vscode/
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore packages #
+# =============== #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore packages #
+# =============== #
+node_modules/
