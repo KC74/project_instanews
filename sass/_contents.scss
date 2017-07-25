@@ -21,6 +21,7 @@
         @extend .container;
         list-style-type: none;
         display: block;
+        width: 100%;
 
         @include screenSize($tabletScreenSize) {
             & {
@@ -62,13 +63,17 @@
 }
 
 .main-content {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 // tablet size styles
 @include screenSize($tabletScreenSize) {
     .story-item {
         width: 50%;
+    }
+
+    .main-content {
+        margin-top: 1.5rem;
     }
 }
 

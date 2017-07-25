@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+// SELECTRIC SCRIPTS
+// SELECTRIC
+$('select').selectric();
+
+
 // HEADER SCRIPTS
 // Header transition
 $('.sections').change(function(event) {
@@ -8,12 +13,12 @@ $('.sections').change(function(event) {
   var $siteHeader = $('.site-header'),
       $stories  = $('#stories'),
       $contentLoader = $('#content-loader'),
-      $MAX_NUM_OF_STORIES = 12;
+      $MAX_NUM_OF_STORIES = 12; 
       
   // check to see if default is selected
   if ($('select option[value]:selected').val() === 'section...') {
     // hide loader
-    $($contentLoader).hide()
+    $($contentLoader).hide();
     // clear previous content
     $($stories).html('');
     // remove header movement
@@ -43,6 +48,7 @@ $('.sections').change(function(event) {
       $.ajax({
         url: url,
         method: 'GET',
+        dataType: 'json'
       })
       .done(function(result) {
         var $contentString = '', // string builder
@@ -89,6 +95,7 @@ $('.sections').change(function(event) {
         }
         // append stories
         $($stories).append($contentString);
+
         // clear content string
         $contentString = '';
 
@@ -118,6 +125,7 @@ function makeListOfSections() {
       $optionsString += '</option>';
   }
   $('#sections').append($optionsString);
+  $('select').selectric('refresh');
 }
 
 
