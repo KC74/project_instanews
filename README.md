@@ -9,7 +9,7 @@ Project Instanews demonstrates the following:
 - background property
 - use of box model
 - use of css properties used for altering visual display of text
-- - ie. font-family, font-style, text-transform, etc...
+    - ie. font-family, font-style, text-transform, etc...
 - uses custom fonts (@font-face)
 - Icon fonts
 - CSS3 properties such as box-shadow and border-radius
@@ -17,9 +17,9 @@ Project Instanews demonstrates the following:
 - Uses flexbox layouts rather than floats
 - Responsive and optimized for three screen sizes: mobile, tablet, and desktop
 - JS Usage:
-- - Use Ajax to fetch data from the NYT Top Stories endpoint
-- - Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
-- - Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
+    - Use Ajax to fetch data from the NYT Top Stories endpoint
+    - Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
+    - Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
 
 Functional requirements:
 - Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user’s selection from a <select> field
