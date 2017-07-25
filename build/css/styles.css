@@ -225,8 +225,8 @@ footer {
     text-transform: capitalize; }
 
 .header-transition, .header-transition--up, .header-transition--reset {
-  -webkit-transition: height 1s ease-in-out 0.5s, margin 1s ease-in-out 0.5s;
-  transition: height 1s ease-in-out 0.5s, margin 1s ease-in-out 0.5s; }
+  -webkit-transition: height 3s ease-in-out 0.1s, margin 1s ease-in-out 0.5s;
+  transition: height 3s ease-in-out 0.1s, margin 1s ease-in-out 0.5s; }
   .header-transition img, .header-transition--up img, .header-transition--reset img {
     max-height: 80%; }
     @media only screen and (min-width: 600px) {
@@ -237,11 +237,15 @@ footer {
     margin-top: 2rem; }
     @media only screen and (min-width: 600px) {
       .header-transition--up img {
+        -ms-flex-preferred-size: 0 1 50%;
+            flex-basis: 0 1 50%;
         max-height: 80%; }
       .header-transition--up {
         min-height: 10%; } }
-  .header-transition--reset img {
-    height: auto; }
+  .header-transition--reset {
+    height: 100%; }
+    .header-transition--reset img {
+      height: auto; }
 
 /*======================================
   Selectric

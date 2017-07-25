@@ -52,7 +52,7 @@
 
 .header-transition {
     transition: 
-    height 1s ease-in-out 0.5s,
+    height 3s ease-in-out 0.1s,
     margin 1s ease-in-out 0.5s;
 
     img {
@@ -70,6 +70,7 @@
         // tablet size styles
         @include screenSize($tabletScreenSize) {
             img {
+                flex-basis: 0 1 50%;
                 max-height: 80%;
             }
             & {
@@ -79,6 +80,7 @@
     }
     &--reset {
         @extend .header-transition;
+        height: 100%;
         
         img {
             height: auto;
