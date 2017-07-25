@@ -165,7 +165,8 @@ a {
 footer {
   text-align: center;
   margin: 2rem 2rem;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  color: #c2c2c2; }
   @media only screen and (min-width: 1000px) {
     footer {
       text-align: left; } }
@@ -225,13 +226,13 @@ footer {
     text-transform: capitalize; }
 
 .header-transition, .header-transition--up, .header-transition--reset {
-  -webkit-transition: height 3s ease-in-out 0.1s, margin 1s ease-in-out 0.5s;
-  transition: height 3s ease-in-out 0.1s, margin 1s ease-in-out 0.5s; }
+  -webkit-transition: height 2.5s ease-in-out 1s, margin 1s ease-in-out 0.5s;
+  transition: height 2.5s ease-in-out 1s, margin 1s ease-in-out 0.5s; }
   .header-transition img, .header-transition--up img, .header-transition--reset img {
     max-height: 80%; }
     @media only screen and (min-width: 600px) {
       .header-transition img, .header-transition--up img, .header-transition--reset img {
-        height: 100%; } }
+        height: auto; } }
   .header-transition--up {
     min-height: 25%;
     margin-top: 2rem; }

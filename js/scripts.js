@@ -1,11 +1,14 @@
 $(document).ready(function() {
+// GLOBAL VARAIBLES
+var $storyItems = $('#story-item'),
+    $storyAbstract = $('#story-abstract');
 
 // SELECTRIC SCRIPTS
 // SELECTRIC
 $('select').selectric();
 
 
-// HEADER SCRIPTS
+// HEADER && MAIN SECTION SCRIPTS
 // Header transition
 $('.sections').change(function(event) {
   event.preventDefault();
@@ -71,7 +74,7 @@ $('.sections').change(function(event) {
             // set image url
             $imageUrl = $contentObject[i].multimedia[$lastImg].url; // bg
             // create new list item
-            $contentString += '<li class="story-item">',
+            $contentString += '<li id="story-item" class="story-item">',
             // create anchor and open in new tab
             $contentString += '<a href="' + $storyUrl + ' "target="_blank">',
             // create story container
@@ -79,7 +82,7 @@ $('.sections').change(function(event) {
             // insert background image
             $contentString += 'style="background-image: url(' + $imageUrl + ');">',
             // create abstract container
-            $contentString += '<div class="story-abstract">',
+            $contentString += '<div id="story-abstract" class="story-abstract">',
             // insert <p> abstract </p>
             $contentString += '<p>' + $storyAbstract + '</p>';
             // close off div div a li

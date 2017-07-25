@@ -52,14 +52,14 @@
 
 .header-transition {
     transition: 
-    height 3s ease-in-out 0.1s,
+    height 2.5s ease-in-out 1s,
     margin 1s ease-in-out 0.5s;
 
     img {
         max-height: 80%;
         // tablet size styles
         @include screenSize($tabletScreenSize) {
-            height: 100%;
+            height: auto;
         }
     }
     &--up {

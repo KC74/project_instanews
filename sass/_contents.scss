@@ -30,7 +30,6 @@
             }
         }
 
-
         li {
             text-decoration: none;
             color: black;
@@ -51,6 +50,7 @@
                     padding: 2%;
                     line-height: 1.5;
                 }
+
             }
         }
     }
@@ -65,6 +65,7 @@
 .main-content {
     margin-top: 2rem;
 }
+
 
 // tablet size styles
 @include screenSize($tabletScreenSize) {
