@@ -124,7 +124,7 @@ function makeListOfSections() {
       $optionsString += '<option value="';
       $optionsString += $listOfSections[i];
       $optionsString += '">';
-      $optionsString +=  ($listOfSections[i] == 'tmagazine') ? 'time magazine' : $listOfSections[i];
+      $optionsString +=  ($listOfSections[i] === 'tmagazine') ? 'time magazine' : $listOfSections[i];
       $optionsString += '</option>';
   }
   $('#sections').append($optionsString);
