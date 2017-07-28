@@ -47,7 +47,7 @@ table {
   border-spacing: 0; }
 
 body, ul, li, ol, p, em, img {
-  font-family: 'open_sanslight'; }
+  font-family: 'open_sans'; }
 
 * {
   outline: none;
@@ -68,25 +68,25 @@ a {
     color: #ffffff; }
 
 @font-face {
-  font-family: 'open_sansbold';
+  font-family: 'open_sans';
   src: url("../../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../../fonts/opensans-bold-webfont.woff") format("woff"), url("../../fonts/opensans-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: 'open_sansbold_italic';
+  font-family: 'open_sans';
   src: url("../../fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("../../fonts/opensans-bolditalic-webfont.woff") format("woff"), url("../../fonts/opensans-bolditalic-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
-  font-family: 'open_sanslight';
+  font-family: 'open_sans';
   src: url("../../fonts/opensans-light-webfont.woff2") format("woff2"), url("../../fonts/opensans-light-webfont.woff") format("woff"), url("../../fonts/opensans-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'open_sanslight_italic';
+  font-family: 'open_sans';
   src: url("../../fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("../../fonts/opensans-lightitalic-webfont.woff") format("woff"), url("../../fonts/opensans-lightitalic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
@@ -184,6 +184,8 @@ footer {
           justify-content: center; }
 
 .site-header {
+  -webkit-transition: height 1.5s ease-in-out 1s, min-height 1.5s ease-in-out 1s, max-height 1.5s ease-in-out 1s, margin 0.8s ease-in-out 0.5s;
+  transition: height 1.5s ease-in-out 1s, min-height 1.5s ease-in-out 1s, max-height 1.5s ease-in-out 1s, margin 0.8s ease-in-out 0.5s;
   height: 100%;
   min-width: 400px;
   max-width: 100%;
@@ -225,28 +227,28 @@ footer {
     font-size: 1.1rem;
     text-transform: capitalize; }
 
-.header-transition, .header-transition--up, .header-transition--reset {
-  -webkit-transition: height 2.5s ease-in-out 1s, margin 1s ease-in-out 0.5s;
-  transition: height 2.5s ease-in-out 1s, margin 1s ease-in-out 0.5s; }
-  .header-transition img, .header-transition--up img, .header-transition--reset img {
-    max-height: 80%; }
-    @media only screen and (min-width: 600px) {
-      .header-transition img, .header-transition--up img, .header-transition--reset img {
-        height: auto; } }
-  .header-transition--up {
-    min-height: 25%;
-    margin-top: 2rem; }
-    @media only screen and (min-width: 600px) {
-      .header-transition--up img {
-        -ms-flex-preferred-size: 0 1 50%;
-            flex-basis: 0 1 50%;
-        max-height: 80%; }
-      .header-transition--up {
-        min-height: 10%; } }
-  .header-transition--reset {
-    height: 100%; }
-    .header-transition--reset img {
-      height: auto; }
+.header-transition img, .header-transition--up img, .header-transition--reset img {
+  max-height: 80%; }
+  @media only screen and (min-width: 600px) {
+    .header-transition img, .header-transition--up img, .header-transition--reset img {
+      height: auto; } }
+
+.header-transition--up {
+  min-height: 25%;
+  margin-top: 2rem; }
+  @media only screen and (min-width: 600px) {
+    .header-transition--up img {
+      -ms-flex-preferred-size: 0 1 50%;
+          flex-basis: 0 1 50%;
+      max-height: 80%; }
+    .header-transition--up {
+      min-height: 10%; } }
+
+.header-transition--reset {
+  height: 100%;
+  margin-top: 0; }
+  .header-transition--reset img {
+    height: auto; }
 
 /*======================================
   Selectric

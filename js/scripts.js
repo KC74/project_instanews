@@ -25,15 +25,15 @@ $('.sections').change(function(event) {
     // clear previous content
     $($stories).html('');
     // remove header movement
-    $siteHeader.removeClass('header-transition--up');
+    $siteHeader.delay(5000).removeClass('header-transition--up');
     // reset header position
     $siteHeader.addClass('header-transition--reset');
   } else {
-    $( 'select option:selected' ).each(function() {
+    $( 'select option[value]:selected' ).each(function() {
       // clear previous content
       $($stories).html('');
       // reset the position
-      $siteHeader.removeClass('header-transition--reset')
+      $siteHeader.delay(1600).removeClass('header-transition--reset');
       // move header up
       $siteHeader.addClass('header-transition--up');
 

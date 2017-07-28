@@ -5,6 +5,11 @@
 }
 
 .site-header {
+    transition: 
+        height 1.5s ease-in-out 1s,
+        min-height 1.5s ease-in-out 1s,
+        max-height 1.5s ease-in-out 1s,
+        margin 0.8s ease-in-out 0.5s;
     @extend %flex-container;
     height: 100%;
     min-width: 400px;
@@ -51,9 +56,6 @@
 }
 
 .header-transition {
-    transition: 
-    height 2.5s ease-in-out 1s,
-    margin 1s ease-in-out 0.5s;
 
     img {
         max-height: 80%;
@@ -81,6 +83,7 @@
     &--reset {
         @extend .header-transition;
         height: 100%;
+        margin-top: 0;
         
         img {
             height: auto;
