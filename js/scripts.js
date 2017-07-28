@@ -117,14 +117,14 @@ $('.sections').change(function(event) {
 // Function to populate list of sections
 function makeListOfSections() {
   // variables
-  var $listOfSections = ['section...', 'home', 'opinion', 'world', 'national', 'politics', 'upshot', 'ny region', 'business', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'movies', 'theatre', 'sunday review', 'fashion', 'time magazine', 'food', 'magazine', 'real estate', 'automobiles', 'obituaries', 'insider'],
+  var $listOfSections = ['section...', 'home', 'opinion', 'world', 'national', 'politics', 'upshot', 'ny region', 'business', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'movies', 'theater', 'sunday review', 'fashion', 'tmagazine', 'food', 'magazine', 'real estate', 'automobiles', 'obituaries', 'insider'],
       $optionsString = '';
   // Add a list of sections
   for (var i = 0 ; i < $listOfSections.length ; i++) {
       $optionsString += '<option value="';
       $optionsString += $listOfSections[i];
       $optionsString += '">';
-      $optionsString += $listOfSections[i];
+      $optionsString +=  ($listOfSections[i] == 'tmagazine') ? 'time magazine' : $listOfSections[i];
       $optionsString += '</option>';
   }
   $('#sections').append($optionsString);
