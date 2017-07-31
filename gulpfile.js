@@ -1,19 +1,30 @@
 
 // Required packages
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    watch = require('gulp-watch'),
-    browserSync = require('browser-sync').create(),
-    eslint = require('gulp-eslint'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    prettyError = require('gulp-prettyerror');
+const   gulp = require('gulp'),
+        uglify = require('gulp-uglify'),
+        rename = require('gulp-rename'),
+        watch = require('gulp-watch'),
+        browserSync = require('browser-sync').create(),
+        eslint = require('gulp-eslint'),
+        sass = require('gulp-sass'),
+        autoprefixer = require('gulp-autoprefixer'),
+        cssnano = require('gulp-cssnano'),
+        prettyError = require('gulp-prettyerror'),
+        babel = require('gulp-babel');
+        
+// Babel
+gulp.task('babel', () => {
+    return gulp.src('./js/*.js')
+        .pipe(babel())
+        .pipe(gulp.dest('./build/js'));
+});
 
 // Script build
 gulp.task('scripts', ['lint'], function() {
     gulp.src('./js/*.js')
+    .pipe(babel({
+        presets: ['es2015']
+    })) // call babel
     .pipe(uglify()) // call uglify function on files
     .pipe(rename({ extname: '.min.js'})) // rename uglified file
     .pipe(gulp.dest('./build/js')) // save to build/js folder
