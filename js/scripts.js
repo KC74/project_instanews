@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 // GLOBAL VARAIBLES
 
 
@@ -9,13 +9,14 @@ $('select').selectric();
 
 // HEADER && MAIN SECTION SCRIPTS
 // Header transition
-$('.sections').change(function(event) {
+$('.sections').change((event) => {
   event.preventDefault();
   // variables
-  var $siteHeader = $('.site-header'),
-      $stories  = $('#stories'),
-      $contentLoader = $('#content-loader'),
-      $MAX_NUM_OF_STORIES = 12; 
+  let   $siteHeader = $('.site-header'),
+        $stories  = $('#stories'),
+        $contentLoader = $('#content-loader');
+
+  const $MAX_NUM_OF_STORIES = 12; 
       
   // check to see if default is selected
   if ($('select option[value]:selected').val() === 'section...') {
@@ -28,7 +29,7 @@ $('.sections').change(function(event) {
     // reset header position
     $siteHeader.addClass('header-transition--reset');
   } else {
-    $( 'select option[value]:selected' ).each(function() {
+    $( 'select option[value]:selected' ).each(() => {
       // clear previous content
       $($stories).html('');
       // reset the position
@@ -38,7 +39,7 @@ $('.sections').change(function(event) {
 
       // NYT API
       // Built by LucyBot. www.lucybot.com
-      var $section = $('option[value]:selected').val().replace(' ', ''),
+      let $section = $('option[value]:selected').val().replace(' ', ''),
           url = '';     
           url += 'https://api.nytimes.com/svc/topstories/v2/',
           url += $section,
@@ -52,8 +53,8 @@ $('.sections').change(function(event) {
         method: 'GET',
         dataType: 'json'
       })
-      .done(function(result) {
-        var $contentString = '', // string builder
+      .done((result) => {
+        let $contentString = '', // string builder
             $contentObject = result.results, // api object
             $limit = 0; // counter for story counting limit
 
@@ -62,8 +63,8 @@ $('.sections').change(function(event) {
         $($stories).hide();
 
         // go through the object's stories
-        for (var i = 0; i < $contentObject.length ; i++) {
-          var $storyUrl = $contentObject[i].short_url, // url 
+        for (let i = 0; i < $contentObject.length ; i++) {
+          let $storyUrl = $contentObject[i].short_url, // url 
               $lastImg = $contentObject[i].multimedia.length - 1, // largest img
               $storyAbstract = $contentObject[i].abstract, // abstract
               $imageUrl = ''; // image url
@@ -116,10 +117,10 @@ $('.sections').change(function(event) {
 // Function to populate list of sections
 function makeListOfSections() {
   // variables
-  var $listOfSections = ['section...', 'home', 'opinion', 'world', 'national', 'politics', 'upshot', 'ny region', 'business', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'movies', 'theater', 'sunday review', 'fashion', 'tmagazine', 'food', 'magazine', 'real estate', 'automobiles', 'obituaries', 'insider'],
+  let $listOfSections = ['section...', 'home', 'opinion', 'world', 'national', 'politics', 'upshot', 'ny region', 'business', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'movies', 'theater', 'sunday review', 'fashion', 'tmagazine', 'food', 'magazine', 'real estate', 'automobiles', 'obituaries', 'insider'],
       $optionsString = '';
   // Add a list of sections
-  for (var i = 0 ; i < $listOfSections.length ; i++) {
+  for (let i = 0 ; i < $listOfSections.length ; i++) {
       $optionsString += '<option value="';
       $optionsString += $listOfSections[i];
       $optionsString += '">';
