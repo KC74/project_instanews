@@ -5,7 +5,6 @@ $(document).ready(() => {
 // SELECTRIC SCRIPTS
 // SELECTRIC
 $('select').selectric();
-aejfoiawef
 
 
 // HEADER && MAIN SECTION SCRIPTS
