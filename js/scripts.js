@@ -1,7 +1,6 @@
 $(document).ready(function() {
 // GLOBAL VARAIBLES
-var $storyItems = $('#story-item'),
-    $storyAbstract = $('#story-abstract');
+
 
 // SELECTRIC SCRIPTS
 // SELECTRIC
