@@ -1,5 +1,9 @@
+import $ from 'jquery';
+import 'jquery-selectric'
+import '../styles/styles.scss';
+
 $(document).ready(() => {
-// GLOBAL VARAIBLES
+// GLOBAL VARIABLES
 
 
 // SELECTRIC SCRIPTS
@@ -76,15 +80,15 @@ $('.sections').change((event) => {
             // create new list item
             $contentString += '<li id="story-item" class="story-item">',
             // create anchor and open in new tab
-            $contentString += '<a href="' + $storyUrl + ' "target="_blank">',
+            $contentString += `<a href="${$storyUrl}" target="_blank">`,
             // create story container
             $contentString += '<div class="story-container"',
             // insert background image
-            $contentString += 'style="background-image: url(' + $imageUrl + ');">',
+            $contentString += `style="background-image: url(${$imageUrl});">`,
             // create abstract container
             $contentString += '<div id="story-abstract" class="story-abstract">',
             // insert <p> abstract </p>
-            $contentString += '<p>' + $storyAbstract + '</p>';
+            $contentString += `<p>${$storyAbstract}</p>`,
             // close off div div a li
             $contentString += '</div></div></a></li>';
             // increment limit
